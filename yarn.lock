@@ -9872,15 +9872,10 @@ mdast-util-to-hast@^4.0.0:
     unist-util-visit "^1.1.0"
     xtend "^4.0.1"
 
-mdast-util-to-string@^1.0.0:
+mdast-util-to-string@^1.0.0, mdast-util-to-string@^1.0.5:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/mdast-util-to-string/-/mdast-util-to-string-1.1.0.tgz#27055500103f51637bd07d01da01eb1967a43527"
   integrity sha512-jVU0Nr2B9X3MU4tSK7JP1CMkSvOj7X5l/GboG1tKRw52lLF1x2Ju92Ms9tNetCcbfX3hzlM73zYo2NKkWSfF/A==
-
-mdast-util-to-string@^1.0.5:
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/mdast-util-to-string/-/mdast-util-to-string-1.0.7.tgz#62d8e9c6b2113070d8b497c7dc35bf12796f06ee"
-  integrity sha512-P+gdtssCoHOX+eJUrrC30Sixqao86ZPlVjR5NEAoy0U79Pfxb1Y0Gntei0+GrnQD4T04X9xA8tcugp90cSmNow==
 
 mdn-data@2.0.4:
   version "2.0.4"
@@ -10530,10 +10525,10 @@ netlify-cms-widget-map@^1.4.0:
   dependencies:
     ol "^5.3.1"
 
-netlify-cms-widget-markdown@^2.11.3, netlify-cms-widget-markdown@^2.12.1:
-  version "2.12.1"
-  resolved "https://registry.yarnpkg.com/netlify-cms-widget-markdown/-/netlify-cms-widget-markdown-2.12.1.tgz#7dae78da385b5c73fd9adadc594b8a69f01ff047"
-  integrity sha512-89R+auIAOpd1g16s4m1cUDhQWOnD+B6kzn6BF+xwtOgU0mIRoHBslwWwpJCNrxuKxscYrnPphpXa+mjl/YEfww==
+netlify-cms-widget-markdown@^2.12.1, netlify-cms-widget-markdown@^2.12.2:
+  version "2.12.2"
+  resolved "https://registry.yarnpkg.com/netlify-cms-widget-markdown/-/netlify-cms-widget-markdown-2.12.2.tgz#b370a2240a58a4206ac8686ebdd1a817cc2a8bf5"
+  integrity sha512-NXmdD+nOTj6+L39xFV5cSGTf9qhZmYRJ4h2D+lvqGi3tDFKe4K6Hw25d1fGiLtE5ql3TDGhcMc8rusD9kOL9AQ==
   dependencies:
     is-hotkey "^0.1.4"
     mdast-util-definitions "^1.2.3"
