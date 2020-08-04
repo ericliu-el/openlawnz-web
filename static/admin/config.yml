@@ -1,404 +1,406 @@
-collections:
-  - name: ourMission
-    label: Our Mission
-    label_singular: Page
-    folder: content/our-mission
-    create: true
-    extension: json
-    fields:
-      - { name: title, Label: Title}
-      - { name: description, Label: Description }
-      - label: Sections
-        label_singular: Section
-        name: content
-        widget: list 
-        types:
-          - label: Text
-            name: text
-            summary: "{{title}} (Text)"
-            fields:
-              - { name: title, Label: Title}
-              - label: Text
-                label_singular: Text
-                name: content
-                widget: list
-                fields:
-                  - { name: title, label: "Summary", hint: "This will not appear on the page" }
-                  - { name: content_html, label: "Content", widget: markdown }
-          - label: "Contributors List"
-            name: contributors
-            fields:
-              - { name: title, label: "Heading" }
-              - label: Contributors
-                name: contributors
-                widget: list
-                fields:
-                  - { name: title, label: Name }
-                  - label: "Image"
-                    name: "image_url"
-                    widget: "image"
-                    media_library:
-                      config:
-                        multiple: false
-          - label: "Directors List"
-            name: "directors"
-            fields:
-              - { name: title, label: "Heading" }
-              - label: Directors
-                name: directors
-                widget: list
-                fields:
-                  - { name: name, label: Name }
-                  - { name: bio, label: Bio, widget: markdown }
-                  - label: "Image"
-                    name: "image_url"
-                    widget: "image"
-                    media_library:
-                      config:
-                        multiple: 
-          - label: Checklist
-            label_singular: Checklist
-            summary: "{{title}} (Checklist)"
-            name: checklist
-            fields:
-              - { name: title, Label: Title }
-              - label: Checklist Items
-                label_singular: Checklist Item
-                name: content
-                widget: list
-                fields:
-                - { name: title, label: Title }
-                - label: Sub Items
-                  label_singular: Sub Item
-                  name: subitems
-                  widget: list
-                  fields:
-                    - { name: title, label: Title }
-                    - { name: content, label: Content }
+#config is out of date and will be deleted. Leaving Here for Temporary Reference
 
-  - name: microsites
-    label: Microsites
-    label_singular: Microsite
-    folder: content/microsites
-    create: true
-    extension: json
-    fields:
-      - { name: title, Label: Title}
-      - { name: description, Label: Description, widget: markdown }
-      - label: "Image"
-        name: "image_url"
-        widget: "image"
-        media_library:
-          config:
-            multiple: false
-      - label: Sections
-        label_singular: Section
-        name: content
-        widget: list
-        fields:
-          - { name: title, Label: Title }
-          - label: Modules
-            label_singular: Module
-            name: modules
-            widget: list
-            summary: "{{title}} ({{type}})"
-            types:
-              - label: Text
-                name: text
-                summary: "{{title}} (Text)"
-                fields:
-                  - { name: title, Label: Title}
-                  - label: Text
-                    label_singular: Text
-                    name: content
-                    widget: list
-                    fields:
-                      - { name: title, Label: Summary }
-                      - { name: content_html, Label: Content, widget: markdown }
-              - label: FAQs
-                label_singular: FAQ
-                summary: "{{title}} (FAQs)"
-                name: faqs
-                fields:
-                  - { name: title, Label: Title }
-                  - label: FAQ Items
-                    label_singular: FAQ Item
-                    name: content
-                    widget: list
-                    fields:
-                    - { name: question, label: Question }
-                    - { name: answer, label: Answer, widget: text }
-              - label: Checklist
-                label_singular: Checklist
-                summary: "{{title}} (Checklist)"
-                name: checklist
-                fields:
-                  - { name: title, Label: Title }
-                  - label: Checklist Items
-                    label_singular: Checklist Item
-                    name: content
-                    widget: list
-                    fields:
-                    - { name: title, label: Title }
-                    - label: Sub Items
-                      label_singular: Sub Item
-                      name: subitems
-                      widget: list
-                      fields:
-                        - { name: title, label: Title }
-                        - { name: content, label: Content, widget: text }
-              - label: Wizard
-                name: wizard
-                summary: "{{title}} (Wizard)"
-                fields:
-                  - { name: title, Label: Title}
-                  - name: wizard
-                    Label: "Select Wizard"
-                    widget: relation
-                    collection: wizards
-                    searchFields: ["title"]
-                    valueField: "key"
-                    displayFields: ["title"]
-              - label: Case List
-                name: case_list
-                fields:
-                  - { name: title, Label: Title}
-                  - name: cases
-                    label: Cases
-                    label_singular: Case
-                    widget: case_list
+# collections:
+#   - name: ourMission
+#     label: Our Mission
+#     label_singular: Page
+#     folder: content/our-mission
+#     create: true
+#     extension: json
+#     fields:
+#       - { name: title, Label: Title}
+#       - { name: description, Label: Description }
+#       - label: Sections
+#         label_singular: Section
+#         name: content
+#         widget: list 
+#         types:
+#           - label: Text
+#             name: text
+#             summary: "{{title}} (Text)"
+#             fields:
+#               - { name: title, Label: Title}
+#               - label: Text
+#                 label_singular: Text
+#                 name: content
+#                 widget: list
+#                 fields:
+#                   - { name: title, label: "Summary", hint: "This will not appear on the page" }
+#                   - { name: content_html, label: "Content", widget: markdown }
+#           - label: "Contributors List"
+#             name: contributors
+#             fields:
+#               - { name: title, label: "Heading" }
+#               - label: Contributors
+#                 name: contributors
+#                 widget: list
+#                 fields:
+#                   - { name: title, label: Name }
+#                   - label: "Image"
+#                     name: "image_url"
+#                     widget: "image"
+#                     media_library:
+#                       config:
+#                         multiple: false
+#           - label: "Directors List"
+#             name: "directors"
+#             fields:
+#               - { name: title, label: "Heading" }
+#               - label: Directors
+#                 name: directors
+#                 widget: list
+#                 fields:
+#                   - { name: name, label: Name }
+#                   - { name: bio, label: Bio, widget: markdown }
+#                   - label: "Image"
+#                     name: "image_url"
+#                     widget: "image"
+#                     media_library:
+#                       config:
+#                         multiple: 
+#           - label: Checklist
+#             label_singular: Checklist
+#             summary: "{{title}} (Checklist)"
+#             name: checklist
+#             fields:
+#               - { name: title, Label: Title }
+#               - label: Checklist Items
+#                 label_singular: Checklist Item
+#                 name: content
+#                 widget: list
+#                 fields:
+#                 - { name: title, label: Title }
+#                 - label: Sub Items
+#                   label_singular: Sub Item
+#                   name: subitems
+#                   widget: list
+#                   fields:
+#                     - { name: title, label: Title }
+#                     - { name: content, label: Content }
+
+#   - name: microsites
+#     label: Microsites
+#     label_singular: Microsite
+#     folder: content/microsites
+#     create: true
+#     extension: json
+#     fields:
+#       - { name: title, Label: Title}
+#       - { name: description, Label: Description, widget: markdown }
+#       - label: "Image"
+#         name: "image_url"
+#         widget: "image"
+#         media_library:
+#           config:
+#             multiple: false
+#       - label: Sections
+#         label_singular: Section
+#         name: content
+#         widget: list
+#         fields:
+#           - { name: title, Label: Title }
+#           - label: Modules
+#             label_singular: Module
+#             name: modules
+#             widget: list
+#             summary: "{{title}} ({{type}})"
+#             types:
+#               - label: Text
+#                 name: text
+#                 summary: "{{title}} (Text)"
+#                 fields:
+#                   - { name: title, Label: Title}
+#                   - label: Text
+#                     label_singular: Text
+#                     name: content
+#                     widget: list
+#                     fields:
+#                       - { name: title, Label: Summary }
+#                       - { name: content_html, Label: Content, widget: markdown }
+#               - label: FAQs
+#                 label_singular: FAQ
+#                 summary: "{{title}} (FAQs)"
+#                 name: faqs
+#                 fields:
+#                   - { name: title, Label: Title }
+#                   - label: FAQ Items
+#                     label_singular: FAQ Item
+#                     name: content
+#                     widget: list
+#                     fields:
+#                     - { name: question, label: Question }
+#                     - { name: answer, label: Answer, widget: text }
+#               - label: Checklist
+#                 label_singular: Checklist
+#                 summary: "{{title}} (Checklist)"
+#                 name: checklist
+#                 fields:
+#                   - { name: title, Label: Title }
+#                   - label: Checklist Items
+#                     label_singular: Checklist Item
+#                     name: content
+#                     widget: list
+#                     fields:
+#                     - { name: title, label: Title }
+#                     - label: Sub Items
+#                       label_singular: Sub Item
+#                       name: subitems
+#                       widget: list
+#                       fields:
+#                         - { name: title, label: Title }
+#                         - { name: content, label: Content, widget: text }
+#               - label: Wizard
+#                 name: wizard
+#                 summary: "{{title}} (Wizard)"
+#                 fields:
+#                   - { name: title, Label: Title}
+#                   - name: wizard
+#                     Label: "Select Wizard"
+#                     widget: relation
+#                     collection: wizards
+#                     searchFields: ["title"]
+#                     valueField: "key"
+#                     displayFields: ["title"]
+#               - label: Case List
+#                 name: case_list
+#                 fields:
+#                   - { name: title, Label: Title}
+#                   - name: cases
+#                     label: Cases
+#                     label_singular: Case
+#                     widget: case_list
   
-      - label: Key Terms
-        label_singular: Term
-        name: Terms
-        widget: list
-        fields:
-          - { name: title, Label: Term }
-          - { name: description, Label: Description }
+#       - label: Key Terms
+#         label_singular: Term
+#         name: Terms
+#         widget: list
+#         fields:
+#           - { name: title, Label: Term }
+#           - { name: description, Label: Description }
   
   
-  - name: getEmpowered
-    label: Get Empowered
-    label_singular: Page
-    folder: content/get-empowered
-    create: true
-    extension: json
-    fields:
-      - { name: title, Label: Title}
-      - { name: description, Label: Description }
-      - label: "Image"
-        name: "image_url"
-        widget: "image"
-        media_library:
-          config:
-            multiple: false
-      - label: Sections
-        label_singular: Section
-        name: content
-        widget: list 
-        types:
-          - label: Text
-            name: text
-            summary: "{{title}} (Text)"
-            fields:
-              - { name: title, Label: Title}
-              - label: Text
-                label_singular: Text
-                name: content
-                widget: list
-                fields:
-                  - { name: title, label: "Summary", hint: "This will not appear on the page" }
-                  - { name: content_html, label: "Content", widget: markdown }
-          - label: Card
-            name: card
-            summary: "{{title}} (Card)"
-            fields:
-              - { name: title, Label: Title}
-              - label: Text
-                label_singular: Text
-                name: content
-                widget: list
-                fields:
-                  - { name: title, label: "Summary", hint: "This will not appear on the page" }
-                  - { name: content_html, label: "Content", widget: markdown }
-          - label: Checklist
-            label_singular: Checklist
-            summary: "{{title}} (Checklist)"
-            name: checklist
-            fields:
-              - { name: title, Label: Title }
-              - label: Checklist Items
-                label_singular: Checklist Item
-                name: content
-                widget: list
-                fields:
-                - { name: title, label: Title }
-                - label: Sub Items
-                  label_singular: Sub Item
-                  name: subitems
-                  widget: list
-                  fields:
-                    - { name: title, label: Title }
-                    - { name: content, label: Content }
-          - label: "Contributors List"
-            name: contributors
-            fields:
-              - { name: title, label: "Heading" }
-              - label: Contributors
-                name: contributors
-                widget: list
-                fields:
-                  - { name: title, label: Name }
-                  - label: "Image"
-                    name: "image_url"
-                    widget: "image"
-                    media_library:
-                      config:
-                        multiple: false
+#   - name: getEmpowered
+#     label: Get Empowered
+#     label_singular: Page
+#     folder: content/get-empowered
+#     create: true
+#     extension: json
+#     fields:
+#       - { name: title, Label: Title}
+#       - { name: description, Label: Description }
+#       - label: "Image"
+#         name: "image_url"
+#         widget: "image"
+#         media_library:
+#           config:
+#             multiple: false
+#       - label: Sections
+#         label_singular: Section
+#         name: content
+#         widget: list 
+#         types:
+#           - label: Text
+#             name: text
+#             summary: "{{title}} (Text)"
+#             fields:
+#               - { name: title, Label: Title}
+#               - label: Text
+#                 label_singular: Text
+#                 name: content
+#                 widget: list
+#                 fields:
+#                   - { name: title, label: "Summary", hint: "This will not appear on the page" }
+#                   - { name: content_html, label: "Content", widget: markdown }
+#           - label: Card
+#             name: card
+#             summary: "{{title}} (Card)"
+#             fields:
+#               - { name: title, Label: Title}
+#               - label: Text
+#                 label_singular: Text
+#                 name: content
+#                 widget: list
+#                 fields:
+#                   - { name: title, label: "Summary", hint: "This will not appear on the page" }
+#                   - { name: content_html, label: "Content", widget: markdown }
+#           - label: Checklist
+#             label_singular: Checklist
+#             summary: "{{title}} (Checklist)"
+#             name: checklist
+#             fields:
+#               - { name: title, Label: Title }
+#               - label: Checklist Items
+#                 label_singular: Checklist Item
+#                 name: content
+#                 widget: list
+#                 fields:
+#                 - { name: title, label: Title }
+#                 - label: Sub Items
+#                   label_singular: Sub Item
+#                   name: subitems
+#                   widget: list
+#                   fields:
+#                     - { name: title, label: Title }
+#                     - { name: content, label: Content }
+#           - label: "Contributors List"
+#             name: contributors
+#             fields:
+#               - { name: title, label: "Heading" }
+#               - label: Contributors
+#                 name: contributors
+#                 widget: list
+#                 fields:
+#                   - { name: title, label: Name }
+#                   - label: "Image"
+#                     name: "image_url"
+#                     widget: "image"
+#                     media_library:
+#                       config:
+#                         multiple: false
                         
 
-  - name: getInvolved
-    label: Get Involved
-    label_singular: Page
-    folder: content/get-involved
-    create: true
-    extension: json
-    fields:
-      - { name: title, Label: Title}
-      - { name: description, Label: Description }
-      - label: "Image"
-        name: "image_url"
-        widget: "image"
-        media_library:
-          config:
-            multiple: false
-      - label: Sections
-        label_singular: Section
-        name: content
-        widget: list 
-        types:
-          - label: Text
-            name: text
-            summary: "{{title}} (Text)"
-            fields:
-              - { name: title, Label: Title}
-              - label: Text
-                label_singular: Text
-                name: content
-                widget: list
-                fields:
-                  - { name: title, label: "Summary", hint: "This will not appear on the page" }
-                  - { name: content_html, label: "Content", widget: markdown }
-          - label: Checklist
-            label_singular: Checklist
-            summary: "{{title}} (Checklist)"
-            name: checklist
-            fields:
-              - { name: title, Label: Title }
-              - label: Checklist Items
-                label_singular: Checklist Item
-                name: content
-                widget: list
-                fields:
-                - { name: title, label: Title }
-                - label: Sub Items
-                  label_singular: Sub Item
-                  name: subitems
-                  widget: list
-                  fields:
-                    - { name: title, label: Title }
-                    - { name: content, label: Content }
-          - label: "Contributors List"
-            name: contributors
-            fields:
-              - { name: title, label: "Heading" }
-              - label: Contributors
-                name: contributors
-                widget: list
-                fields:
-                  - { name: title, label: Name }
-                  - label: "Image"
-                    name: "image_url"
-                    widget: "image"
-                    media_library:
-                      config:
-                        multiple: false
+#   - name: getInvolved
+#     label: Get Involved
+#     label_singular: Page
+#     folder: content/get-involved
+#     create: true
+#     extension: json
+#     fields:
+#       - { name: title, Label: Title}
+#       - { name: description, Label: Description }
+#       - label: "Image"
+#         name: "image_url"
+#         widget: "image"
+#         media_library:
+#           config:
+#             multiple: false
+#       - label: Sections
+#         label_singular: Section
+#         name: content
+#         widget: list 
+#         types:
+#           - label: Text
+#             name: text
+#             summary: "{{title}} (Text)"
+#             fields:
+#               - { name: title, Label: Title}
+#               - label: Text
+#                 label_singular: Text
+#                 name: content
+#                 widget: list
+#                 fields:
+#                   - { name: title, label: "Summary", hint: "This will not appear on the page" }
+#                   - { name: content_html, label: "Content", widget: markdown }
+#           - label: Checklist
+#             label_singular: Checklist
+#             summary: "{{title}} (Checklist)"
+#             name: checklist
+#             fields:
+#               - { name: title, Label: Title }
+#               - label: Checklist Items
+#                 label_singular: Checklist Item
+#                 name: content
+#                 widget: list
+#                 fields:
+#                 - { name: title, label: Title }
+#                 - label: Sub Items
+#                   label_singular: Sub Item
+#                   name: subitems
+#                   widget: list
+#                   fields:
+#                     - { name: title, label: Title }
+#                     - { name: content, label: Content }
+#           - label: "Contributors List"
+#             name: contributors
+#             fields:
+#               - { name: title, label: "Heading" }
+#               - label: Contributors
+#                 name: contributors
+#                 widget: list
+#                 fields:
+#                   - { name: title, label: Name }
+#                   - label: "Image"
+#                     name: "image_url"
+#                     widget: "image"
+#                     media_library:
+#                       config:
+#                         multiple: false
 
-  - name: news
-    label: News
-    label_singular: News Item
-    folder: content/news
-    create: true
-    extension: json
-    fields:
-      - { name: title, label: Title }
-      - { name: summary, label: Summary }
-      - { name: content_html, label: Content, widget: markdown }
-      - label: "Image"
-        name: "image_url"
-        widget: "image"
-        media_library:
-          config:
-            multiple: false
-      - { name: image_alt, label: Image Alt }
-      - { name: date, label: Date Posted, widget: datetime }
+#   - name: news
+#     label: News
+#     label_singular: News Item
+#     folder: content/news
+#     create: true
+#     extension: json
+#     fields:
+#       - { name: title, label: Title }
+#       - { name: summary, label: Summary }
+#       - { name: content_html, label: Content, widget: markdown }
+#       - label: "Image"
+#         name: "image_url"
+#         widget: "image"
+#         media_library:
+#           config:
+#             multiple: false
+#       - { name: image_alt, label: Image Alt }
+#       - { name: date, label: Date Posted, widget: datetime }
 
-  - name: wizards
-    label: Wizards
-    label_singular: Wizard
-    folder: content/wizard
-    create: true
-    extension: json
-    fields:
-    - { name: title, label: Title }
-    - name: key
-      label: "Key"
-      hint: "The unique key for this step. Once created, do not change this. Only lower case letters, numbers and underscores can be used."
-      pattern: ['[a-z0-9_]+', "Only lower case letters, numbers and underscores can be used"]
-    - label: "Background Image"
-      name: "background"
-      widget: "image"
-      media_library:
-        config:
-          multiple: false
-    - label: Steps
-      label_singular: step
-      name: steps
-      widget: list
-      fields:
-        - { name: label, label: Label }
-        - name: key
-          label: "Key"
-          hint: "The unique key for this step. Only lower case letters, numbers and underscores can be used."
-          pattern: ['[a-z0-9_]+', "Only lower case letters, numbers and underscores can be used"]
-        - { name: question, label: Question, widget: text }
-        - name: options
-          label: Options
-          label_singular: Option
-          widget: list
-          summary: "{{label}}"
-          types:
-            - name: leaf_option
-              label: Leaf Option
-              summary: "{{label}} (Leaf)"
-              fields:
-                - { name: label, label: Label }
-                - name: value
-                  label: "Value"
-                  hint: "The unique value for this option. Only lower case letters, numbers and underscores can be used."
-                  pattern: ['[a-z0-9_]+', "Only lower case letters, numbers and underscores can be used"]
-                - { name: content, label: Content, widget: markdown }
-                - { name: tooltip, label: Tooltip, widget: text, required: false }
-            - name: branch_option
-              label: Branch Option
-              summary: "{{label}} (Branch)"
-              fields:
-                - { name: label, label: Label }
-                - name: value
-                  label: "Value"
-                  hint: "The unique value for this option. Only lower case letters, numbers and underscores can be used."
-                  pattern: ['[a-z0-9_]+', "Only lower case letters, numbers and underscores can be used"]
-                - name: next
-                  label: "Next Step"
-                  widget: wizard_option_next_step
-                - { name: tooltip, label: Tooltip, widget: text, required: false }
+#   - name: wizards
+#     label: Wizards
+#     label_singular: Wizard
+#     folder: content/wizard
+#     create: true
+#     extension: json
+#     fields:
+#     - { name: title, label: Title }
+#     - name: key
+#       label: "Key"
+#       hint: "The unique key for this step. Once created, do not change this. Only lower case letters, numbers and underscores can be used."
+#       pattern: ['[a-z0-9_]+', "Only lower case letters, numbers and underscores can be used"]
+#     - label: "Background Image"
+#       name: "background"
+#       widget: "image"
+#       media_library:
+#         config:
+#           multiple: false
+#     - label: Steps
+#       label_singular: step
+#       name: steps
+#       widget: list
+#       fields:
+#         - { name: label, label: Label }
+#         - name: key
+#           label: "Key"
+#           hint: "The unique key for this step. Only lower case letters, numbers and underscores can be used."
+#           pattern: ['[a-z0-9_]+', "Only lower case letters, numbers and underscores can be used"]
+#         - { name: question, label: Question, widget: text }
+#         - name: options
+#           label: Options
+#           label_singular: Option
+#           widget: list
+#           summary: "{{label}}"
+#           types:
+#             - name: leaf_option
+#               label: Leaf Option
+#               summary: "{{label}} (Leaf)"
+#               fields:
+#                 - { name: label, label: Label }
+#                 - name: value
+#                   label: "Value"
+#                   hint: "The unique value for this option. Only lower case letters, numbers and underscores can be used."
+#                   pattern: ['[a-z0-9_]+', "Only lower case letters, numbers and underscores can be used"]
+#                 - { name: content, label: Content, widget: markdown }
+#                 - { name: tooltip, label: Tooltip, widget: text, required: false }
+#             - name: branch_option
+#               label: Branch Option
+#               summary: "{{label}} (Branch)"
+#               fields:
+#                 - { name: label, label: Label }
+#                 - name: value
+#                   label: "Value"
+#                   hint: "The unique value for this option. Only lower case letters, numbers and underscores can be used."
+#                   pattern: ['[a-z0-9_]+', "Only lower case letters, numbers and underscores can be used"]
+#                 - name: next
+#                   label: "Next Step"
+#                   widget: wizard_option_next_step
+#                 - { name: tooltip, label: Tooltip, widget: text, required: false }

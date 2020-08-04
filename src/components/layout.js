@@ -8,18 +8,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import MainNav from "./MainNav"
-import Footer from "./Footer"
-
-import "../scss/App.scss"
-
 const Layout = ({ children }) => {
   return (
     <>
       <div>
-        <MainNav />
         <main>{children}</main>
-        <Footer />
       </div>
     </>
   )
