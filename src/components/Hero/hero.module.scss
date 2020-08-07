@@ -1,4 +1,4 @@
-@use "../../styles/vars";
+@use "../../styles/vars" as v;
 
 .hero {
   height: 290px;
@@ -7,7 +7,7 @@
   align-items: center;
   font-size: 42px;
   font-weight: bold;
-  color: vars.$color-secondary;
+  color: v.$color-secondary;
   padding: 40px;
   position: relative;
   overflow: hidden;
