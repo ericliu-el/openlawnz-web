@@ -1,0 +1,38 @@
+@use '../../styles/vars';
+
+.footer {
+  color: vars.$color-white;
+  background-color: vars.$color-primary;
+  padding: 24px;
+  font-weight: bold;
+
+  p {
+    line-height: 2.1em;
+  }
+
+  .contact {
+    p:first-child {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  .supporter {
+    margin-top: 54px;
+  }
+
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 80px;
+
+    .supporter {
+      display: flex;
+      margin-top: 0;
+
+      p {
+        margin-right: 1em;
+      }
+    }
+  }
+}

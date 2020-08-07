@@ -1,0 +1,62 @@
+@use "../../styles/vars";
+
+.header {
+  background-color: vars.$color-primary;
+  padding: 12px 24px 30px;
+  display: flex;
+  flex-direction: column;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    .items {
+      a {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 80px;
+
+    nav {
+      width: 100%;
+      margin-bottom: 0;
+
+      .items {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        color: vars.$color-white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.25;
+
+        a + a {
+          margin-left: 32px;
+        }
+
+        a {
+          display: block;
+          color: vars.$color-white;
+          border-bottom: solid 3px vars.$color-primary;
+
+          &:hover {
+            border-bottom: solid 3px vars.$color-secondary;
+          }
+        }
+
+        > svg {
+          display: none;
+        }
+      }
+    }
+  }
+}

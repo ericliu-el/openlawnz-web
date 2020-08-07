@@ -1,0 +1,125 @@
+@use '../../styles/vars' as v;
+
+// homepage
+.homepage {
+  padding-bottom: 48px;
+
+  .content {
+    margin-top: 48px;
+
+    .missions {
+      text-align: center;
+
+      h1 {
+        color: v.$color-primary;
+        font-weight: 900;
+        font-size: 2.5rem;
+
+        & + p {
+          font-size: 1.5rem;
+          font-weight: 600;
+          line-height: 1.25em;
+          margin: 1em 0;
+        }
+      }
+
+      ul {
+        li {
+          margin-top: 2em;
+          p {
+            font-size: 1.125rem;
+            font-weight: bold;
+            margin-top: 1em;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          display: flex;
+          justify-content: space-between;
+
+          li {
+            width: 30%;
+          }
+        }
+      }
+
+      @media (min-width: 1024px) {
+        padding: 0 80px;
+      }
+    }
+
+    .explore {
+      margin-top: 48px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        color: v.$color-primary;
+        font-weight: 900;
+        font-size: 2.5rem;
+        margin-bottom: 24px;
+      }
+
+      .card + .card {
+        margin-top: 16px;
+      }
+
+      @media (min-width: 1024px) {
+        .cards {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+
+          .card + .card {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .right {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .content {
+      display: flex;
+
+      .left {
+        width: 75%;
+      }
+
+      .right {
+        width: 25%;
+        display: block;
+
+        h1 {
+          color: v.$color-primary;
+          font-weight: 900;
+          font-size: 2.5rem;
+        }
+
+        ul {
+          margin-top: 12px;
+
+          li {
+            font-size: 1.375rem;
+            font-weight: bold;
+            margin-top: 0.5em;
+
+            a {
+              &:hover {
+                color: v.$color-secondary;
+                border-bottom: 1px solid v.$color-secondary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

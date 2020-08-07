@@ -1,0 +1,116 @@
+@use '../../styles/vars' as v;
+
+.button {
+  margin: 20px;
+  background-color: v.$color-secondary;
+  color: v.$color-white;
+  outline: 0;
+
+  position: relative;
+  font-size: 22px;
+  padding: 0.47em 1.1em;
+  font-weight: bold;
+  border-radius: 6px;
+  border: 2px solid v.$color-secondary;
+
+  display: flex;
+  align-items: center;
+
+  > svg {
+    margin-right: 12px;
+  }
+
+  &.small {
+    padding: 0.32em 1.1em;
+  }
+
+  &:hover {
+    background-color: v.$color-secondary-dark;
+    border-color: v.$color-secondary-dark;
+  }
+
+  &:focus {
+    background-color: v.$color-secondary;
+    border-color: v.$color-secondary;
+    box-shadow: 0px 0px 0px 1px v.$color-white inset;
+  }
+
+  &:active {
+    background-color: v.$color-secondary-dark;
+    border-color: v.$color-secondary-dark;
+    box-shadow: none;
+  }
+
+  &.disabled {
+    cursor: default;
+    color: v.$color-grey-80;
+    background-color: v.$color-grey-40;
+    border-color: v.$color-grey-40;
+    box-shadow: none;
+  }
+
+  &.outline {
+    color: v.$color-secondary;
+    background-color: v.$color-white;
+
+    &:hover {
+      background-color: v.$color-secondary;
+      border-color: v.$color-secondary;
+      color: v.$color-white;
+    }
+
+    &:focus {
+      background-color: v.$color-secondary;
+      border-color: v.$color-secondary;
+      box-shadow: 0px 0px 0px 1px v.$color-white inset;
+      color: v.$color-white;
+    }
+
+    &:active {
+      background-color: v.$color-secondary-dark;
+      border-color: v.$color-secondary-dark;
+      box-shadow: 0px 0px 0px 1px v.$color-white inset;
+      color: v.$color-white;
+    }
+
+    &.disabled {
+      color: v.$color-grey-60;
+      background-color: v.$color-white;
+      border-color: v.$color-grey-40;
+      box-shadow: none;
+
+      &:hover {
+        color: v.$color-grey-60;
+        background-color: v.$color-white;
+      }
+
+      &:focus {
+        color: v.$color-grey-60;
+        background-color: v.$color-white;
+        box-shadow: none;
+      }
+    }
+  }
+
+  &.plain {
+    color: v.$color-secondary;
+    background-color: v.$color-white;
+    border-width: 0;
+    padding: 0.3em 0.5em;
+
+    &:hover {
+      background-color: rgba(162, 102, 56, 0.2);
+    }
+
+    &:focus {
+      background-color: rgba(162, 102, 56, 0.3);
+      box-shadow: none;
+    }
+
+    &.disabled {
+      color: v.$color-grey-60;
+      background-color: v.$color-white;
+      box-shadow: none;
+    }
+  }
+}

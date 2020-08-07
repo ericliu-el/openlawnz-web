@@ -1,0 +1,15 @@
+@use '../../styles/vars';
+
+.container {
+  > main {
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: 0 auto;
+
+    @media (min-width: 1024px) {
+      max-width: 1440px;
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+  }
+}
