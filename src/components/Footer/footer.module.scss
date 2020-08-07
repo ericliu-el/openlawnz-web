@@ -1,8 +1,9 @@
-@use '../../styles/vars';
+@use '../../styles/vars' as v;
+@use '../../styles/mixins' as m;
 
 .footer {
-  color: vars.$color-white;
-  background-color: vars.$color-primary;
+  color: v.$color-white;
+  background-color: v.$color-primary;
   padding: 24px;
   font-weight: bold;
 
@@ -20,7 +21,7 @@
     margin-top: 54px;
   }
 
-  @media (min-width: 1024px) {
+  @include m.breakpoint-sm {
     display: flex;
     justify-content: space-between;
     align-items: center;

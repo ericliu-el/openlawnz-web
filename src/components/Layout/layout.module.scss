@@ -1,4 +1,4 @@
-@use '../../styles/vars';
+@use '../../styles/mixins' as m;
 
 .container {
   > main {
@@ -6,7 +6,7 @@
     padding-right: 24px;
     margin: 0 auto;
 
-    @media (min-width: 1024px) {
+    @include m.breakpoint-md {
       max-width: 1440px;
       padding-left: 80px;
       padding-right: 80px;

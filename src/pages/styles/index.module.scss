@@ -1,4 +1,5 @@
 @use '../../styles/vars' as v;
+@use '../../styles/mixins' as m;
 
 // homepage
 .homepage {
@@ -33,7 +34,7 @@
           }
         }
 
-        @media (min-width: 1024px) {
+        @include m.breakpoint-lg {
           display: flex;
           justify-content: space-between;
 
@@ -43,7 +44,7 @@
         }
       }
 
-      @media (min-width: 1024px) {
+      @include m.breakpoint-lg {
         padding: 0 80px;
       }
     }
@@ -66,7 +67,7 @@
         margin-top: 16px;
       }
 
-      @media (min-width: 1024px) {
+      @include m.breakpoint-md {
         .cards {
           display: flex;
           flex-direction: row;
@@ -85,7 +86,7 @@
     }
   }
 
-  @media (min-width: 1024px) {
+  @include m.breakpoint-lg {
     .content {
       display: flex;
 
