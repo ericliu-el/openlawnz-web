@@ -99,10 +99,15 @@
     padding: 0.3em 0.5em;
 
     &:hover {
-      background-color: rgba(162, 102, 56, 0.2);
+      background-color: rgba(162, 102, 56, 0.1);
     }
 
     &:focus {
+      background-color: rgba(162, 102, 56, 0.2);
+      box-shadow: none;
+    }
+
+    &:active {
       background-color: rgba(162, 102, 56, 0.3);
       box-shadow: none;
     }
