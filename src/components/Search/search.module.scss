@@ -25,7 +25,7 @@
     font-weight: bold;
   }
 
-  @include m.breakpoint-sm {
+  @include m.breakpoint-lg {
     max-width: 390px;
   }
 }
