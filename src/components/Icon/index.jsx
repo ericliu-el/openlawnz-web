@@ -1,5 +1,5 @@
 import React from "react"
-import { Hamburger, Arrow } from "./icons"
+import * as Icons from "./icons"
 
 import styles from "./icon.module.scss"
 
@@ -17,8 +17,20 @@ const Icon = ({
   ...props
 }) => {
   const iconsMap = {
-    hamburger: Hamburger,
-    arrow: Arrow,
+    hamburger: Icons.Hamburger,
+    arrowDown: Icons.ArrowDown,
+    arrowUp: Icons.ArrowUp,
+    arrowLeft: Icons.ArrowLeft,
+    arrowRight: Icons.ArrowRight,
+    open: Icons.Open,
+    close: Icons.Close,
+    minus: Icons.Minus,
+    question: Icons.Question,
+    restart: Icons.Restart,
+    more: Icons.More,
+    search: Icons.Search,
+    checkbox: Icons.Checkbox,
+    checkboxChecked: Icons.CheckboxChecked,
   }
 
   const I = iconsMap[name]

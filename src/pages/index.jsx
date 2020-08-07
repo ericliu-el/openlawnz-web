@@ -52,13 +52,13 @@ const HomePage = () => {
           <h1>Latest News</h1>
           <ul>
             <li>
-              <Link href="/">02/09/2020 OpenLaw NZ Receives Law Foundation Grant</Link>
+              <Link to="/">02/09/2020 OpenLaw NZ Receives Law Foundation Grant</Link>
             </li>
             <li>
-              <Link href="/">02/09/2020 OpenLaw NZ launches new website</Link>
+              <Link to="/">02/09/2020 OpenLaw NZ launches new website</Link>
             </li>
             <li>
-              <Link href="/">02/09/2020 Amazing response to call for volunteers</Link>
+              <Link to="/">02/09/2020 Amazing response to call for volunteers</Link>
             </li>
           </ul>
         </div>
