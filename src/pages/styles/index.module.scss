@@ -7,20 +7,18 @@
 
   .content {
     margin-top: 48px;
+    h1 {
+      color: v.$color-primary;
+    }
 
     .missions {
       text-align: center;
 
       h1 {
-        color: v.$color-primary;
-        font-weight: 900;
-        font-size: 2.5rem;
-
         & + p {
           font-size: 1.5rem;
           font-weight: 600;
           line-height: 1.25em;
-          margin: 1em 0;
         }
       }
 
@@ -56,13 +54,6 @@
       flex-direction: column;
       align-items: center;
 
-      h1 {
-        color: v.$color-primary;
-        font-weight: 900;
-        font-size: 2.5rem;
-        margin-bottom: 24px;
-      }
-
       .card + .card {
         margin-top: 16px;
       }
@@ -97,12 +88,6 @@
       .right {
         width: 25%;
         display: block;
-
-        h1 {
-          color: v.$color-primary;
-          font-weight: 900;
-          font-size: 2.5rem;
-        }
 
         ul {
           margin-top: 12px;

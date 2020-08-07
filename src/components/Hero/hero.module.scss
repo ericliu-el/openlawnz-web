@@ -5,12 +5,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 42px;
-  font-weight: bold;
-  color: v.$color-secondary;
   padding: 40px;
   position: relative;
   overflow: hidden;
+
+  h1 {
+    color: v.$color-secondary;
+  }
 
   svg {
     position: absolute;
