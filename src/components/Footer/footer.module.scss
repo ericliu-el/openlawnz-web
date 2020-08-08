@@ -25,7 +25,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 80px;
+    padding: 24px;
 
     .supporter {
       display: flex;
@@ -35,5 +35,9 @@
         margin-right: 1em;
       }
     }
+  }
+
+  @include m.breakpoint-lg {
+    padding: 24px 80px;
   }
 }

@@ -2,7 +2,7 @@ const Menu =
   [
     {
       title: "Our Mission",
-      link: "/",
+      link: "/about",
     },
     {
       title: "Get Involved",

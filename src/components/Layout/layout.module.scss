@@ -6,10 +6,40 @@
     padding-right: 24px;
     margin: 0 auto;
 
-    @include m.breakpoint-md {
+    .layoutTwos {
+      display: flex;
+      flex-direction: column-reverse;
+      padding-top: 3rem;
+      padding-bottom: 40px;
+
+      .layoutLeft,
+      .layoutRight {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include m.breakpoint-md {
+  .container {
+    > main {
       max-width: 1440px;
       padding-left: 80px;
       padding-right: 80px;
+
+      .layoutTwos {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 5rem;
+
+        .layoutLeft {
+          width: 66.67%;
+        }
+
+        .layoutRight {
+          width: 25%;
+        }
+      }
     }
   }
 }

@@ -1,0 +1,37 @@
+@use '../../styles/vars' as v;
+@use '../../styles/mixins' as m;
+
+.about {
+  h1 {
+    margin: 30px 0;
+    color: v.$color-primary;
+  }
+
+  .directors {
+    > div {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+}
+
+@include m.breakpoint-lg {
+  .about {
+    h1 {
+      margin-top: 0;
+    }
+    article + h1 {
+      margin-top: 30px;
+    }
+
+    .directors {
+      display: flex;
+      justify-content: space-between;
+
+      > div {
+        margin: 0;
+        width: 49%;
+      }
+    }
+  }
+}

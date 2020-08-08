@@ -1,0 +1,13 @@
+@use '../../styles/vars' as v;
+
+.article {
+  h1 {
+    color: v.$color-primary;
+  }
+
+  div {
+    font-size: 19px;
+    line-height: 1.5em;
+    color: v.$color-grey-80;
+  }
+}

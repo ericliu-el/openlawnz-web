@@ -170,7 +170,8 @@
           color: v.$color-white;
           border-bottom: solid 3px v.$color-primary;
 
-          &:hover {
+          &:hover,
+          &.active {
             border-bottom: solid 3px v.$color-secondary;
           }
         }
