@@ -36,7 +36,7 @@ const Header = () => {
               onClick={() => setOpenMenu(true)}
               className={openMenu ? styles.hideIcon : null}
             />
-            <Link activeClassName={styles.active} to="/about">
+            <Link partiallyActive activeClassName={styles.active} to="/about">
               Our Mission
             </Link>
             <Link to="/">Get Involved</Link>
