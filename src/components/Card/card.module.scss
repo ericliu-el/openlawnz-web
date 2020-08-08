@@ -35,11 +35,11 @@
   }
 
   &.medium {
-    max-width: 366px;
+    width: 366px;
   }
 
   &.large {
-    max-width: 740px;
+    width: 740px;
     flex-direction: row;
 
     div {

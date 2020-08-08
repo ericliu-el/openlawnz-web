@@ -6,6 +6,9 @@ import Access from "../images/svgs/access.svg"
 import Innovation from "../images/svgs/innovation.svg"
 import Fund from "../images/svgs/fund.svg"
 
+import RepossessionPic from "../images/repossession.png"
+import VolunteeringPic from "../images/volunteering.png"
+import FeesPic from "../images/fees.png"
 import styles from "./styles/index.module.scss"
 
 const HomePage = () => {
@@ -39,9 +42,9 @@ const HomePage = () => {
           <div className={styles.explore}>
             <h1>Explore Openlaw NZ</h1>
             <div className={styles.cards}>
-              <Card.Small title="How to Use Openlaw" />
-              <Card.Small title="Get Legal Knowledge" />
-              <Card.Small title="Become a Part of Us" />
+              <Card.Small title="How to Use Openlaw" imgSrc={FeesPic} />
+              <Card.Small title="Get Legal Knowledge" imgSrc={RepossessionPic} />
+              <Card.Small title="Become a Part of Us" imgSrc={VolunteeringPic} />
             </div>
           </div>
 
