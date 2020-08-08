@@ -13,7 +13,7 @@ const AboutUs = () => {
     <Layout className={styles.about}>
       <Layout.Twos>
         <Layout.Left>
-          <Article>
+          <Article className={styles.article}>
             <Article.Title>About Us</Article.Title>
             <Article.Content>
               OpenLaw NZ is an open-source legal data platform. Our goal is to improve the accessibility of case law and
