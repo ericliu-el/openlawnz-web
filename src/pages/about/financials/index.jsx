@@ -1,7 +1,7 @@
 import React from "react"
 import { Article, Layout, SideMenu } from "../../../components"
 
-import MenuData from "../menuData"
+import MenuData from "../menuData.json"
 
 import styles from "./financials.module.scss"
 import { Link } from "gatsby"

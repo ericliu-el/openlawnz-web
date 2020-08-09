@@ -4,7 +4,7 @@ import { Article, Card, Layout, SideMenu } from "../../components"
 import AvatarAndrew from "../../../static/assets/andrew-easterbrook.png"
 import AvatarWill from "../../../static/assets/will.png"
 
-import MenuData from "./menuData"
+import MenuData from "./menuData.json"
 
 import styles from "./about.module.scss"
 
