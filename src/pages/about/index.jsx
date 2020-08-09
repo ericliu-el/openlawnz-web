@@ -16,11 +16,19 @@ const AboutUs = () => {
           <Article className={styles.article}>
             <Article.Title>About Us</Article.Title>
             <Article.Content>
-              OpenLaw NZ is an open-source legal data platform. Our goal is to improve the accessibility of case law and
-              other legal information in New Zealand. We want to make it easier for all New Zealanders to understand
-              law. You can use our search to find case law, and navigate between related information. You can also use
-              our plugins (or write your own) to aid your research. You can use our API to build case law intelligence
-              into your own applications and services. For an example, see our chrome extension.
+              <p>
+                OpenLaw NZ is an open-source legal data platform. Our goal is to improve the accessibility of case law
+                and other legal information in New Zealand. We want to make it easier for all New Zealanders to
+                understand law.
+              </p>
+              <p>
+                You can use our search to find case law, and navigate between related information. You can also use our
+                plugins (or write your own) to aid your research.
+              </p>
+              <p>
+                You can use our API to build case law intelligence into your own applications and services. For an
+                example, see our chrome extension.
+              </p>
             </Article.Content>
           </Article>
 
