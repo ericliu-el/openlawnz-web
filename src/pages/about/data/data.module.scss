@@ -1,0 +1,15 @@
+@use '../../../styles/mixins' as m;
+
+.data {
+  article:first-child {
+    margin-top: 30px;
+  }
+}
+
+@include m.breakpoint-md {
+  .data {
+    article:first-child {
+      margin-top: 0;
+    }
+  }
+}

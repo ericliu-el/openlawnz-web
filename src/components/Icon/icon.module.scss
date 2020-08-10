@@ -1,0 +1,36 @@
+@use '../../styles/vars' as v;
+
+.icon {
+  &.small {
+    width: 10px;
+    vertical-align: baseline;
+  }
+
+  &.medium {
+    width: 1em;
+  }
+
+  &.fillWhite {
+    fill: v.$color-white;
+  }
+
+  &.fillSecondary {
+    fill: v.$color-secondary;
+  }
+
+  &.fillBlack {
+    fill: v.$color-black;
+  }
+
+  &.strokeWhite {
+    stroke: v.$color-white;
+  }
+
+  &.strokeSecondary {
+    stroke: v.$color-secondary;
+  }
+
+  &.strokeBlack {
+    stroke: v.$color-black;
+  }
+}

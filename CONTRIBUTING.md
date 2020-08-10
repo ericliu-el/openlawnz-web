@@ -19,13 +19,14 @@ By making a contribution to this OpenLaw NZ respository, you agree to the follow
 **"Submit"** means any act by which a Contribution is transferred to Us by You by means of tangible or intangible media, including but not limited to electronic mailing lists, source code control systems, and issue tracking systems that are managed by, or on behalf of, Us, but excluding any transfer that is conspicuously marked or otherwise designated in writing by You as "Not a Contribution."
 
 ## Copyright license to Us
+
 Subject to the terms and conditions of this Agreement, You hereby grant to Us a worldwide, royalty-free, exclusive, perpetual and irrevocable (except as stated below) license, with the right to transfer an unlimited number of non-exclusive licenses or to grant sublicenses to third parties, under the Copyright covering the Contribution to use the Contribution by all means, including, but not limited to:
 
-* publish the Contribution,
-* modify the Contribution,
-* prepare derivative works based upon or containing the Contribution and/or to combine the Contribution with other Materials,
-* reproduce the Contribution in original or modified form,
-* distribute, to make the Contribution available to the public, display and publicly perform the Contribution in original or modified form.
+- publish the Contribution,
+- modify the Contribution,
+- prepare derivative works based upon or containing the Contribution and/or to combine the Contribution with other Materials,
+- reproduce the Contribution in original or modified form,
+- distribute, to make the Contribution available to the public, display and publicly perform the Contribution in original or modified form.
 
 This Agreement shall come into effect upon you submitting a Contribution.
 
@@ -37,11 +38,11 @@ In the event of a termination of this Agreement, those clauses which by their na
 
 Upon such grant of rights to Us, We immediately grant to You a worldwide, royalty-free, non-exclusive, perpetual and irrevocable license, with the right to transfer an unlimited number of non-exclusive licenses or to grant sublicenses to third parties, under the Copyright covering the Contribution to use the Contribution by all means, including, but not limited to:
 
-* publish the Contribution,
-* modify the Contribution,
-* prepare derivative works based upon or containing the Contribution and/or to combine the Contribution with other Materials,
-* reproduce the Contribution in original or modified form,
-* distribute, to make the Contribution available to the public, display and publicly perform the Contribution in original or modified form.
+- publish the Contribution,
+- modify the Contribution,
+- prepare derivative works based upon or containing the Contribution and/or to combine the Contribution with other Materials,
+- reproduce the Contribution in original or modified form,
+- distribute, to make the Contribution available to the public, display and publicly perform the Contribution in original or modified form.
 
 This license back is limited to the Contribution and does not provide any rights to the Material.
 

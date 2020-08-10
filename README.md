@@ -1,34 +1,36 @@
 # openlawnz-web
+
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ![Dependabot](https://badgen.net/dependabot/openlawnz/openlawnz-web/117378835=?icon=dependabot)
 
 ## Running
+
 Create a `.env` file in the root of the project with the content copied of `env-sample`. The values for each key can be found pinned in the slack channel #website.
 
-	yarn install
-	gatsby develop
+    yarn install
+    gatsby develop
 
 Visit http://localhost:8000/
 
 ## Running the CMS
 
-	npx netlify-cms-proxy-server
-	gatsby develop
+    npx netlify-cms-proxy-server
+    gatsby develop
 
 Visit http://localhost:8000/admin/
 
 ## Building
 
-	gatsby build
+    gatsby build
 
 ## Contributors
 
 Please refer to the following Wiki pages:
 
-* [Overview](https://github.com/openlawnz/openlawnz-web/wiki/OpenLawNZ-Website-Overview)
-* [Contributing agreement and code of conduct](https://github.com/openlawnz/openlawnz-web/blob/master/CONTRIBUTING.md)
-* [Workflow](https://github.com/openlawnz/openlawnz-web/wiki/Workflow)
-* [Data Procurement Policy](https://github.com/openlawnz/openlawnz-parsers/blob/master/PROCUREMENT.md)
+- [Overview](https://github.com/openlawnz/openlawnz-web/wiki/OpenLawNZ-Website-Overview)
+- [Contributing agreement and code of conduct](https://github.com/openlawnz/openlawnz-web/blob/master/CONTRIBUTING.md)
+- [Workflow](https://github.com/openlawnz/openlawnz-web/wiki/Workflow)
+- [Data Procurement Policy](https://github.com/openlawnz/openlawnz-parsers/blob/master/PROCUREMENT.md)
 
 ## NOTICE
 

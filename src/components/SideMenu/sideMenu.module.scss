@@ -1,0 +1,39 @@
+@use '../../styles/vars' as v;
+
+.sideMenu {
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: bold;
+  color: v.$color-primary;
+  width: 100%;
+
+  > li {
+    a {
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      width: 100%;
+      display: inline-block;
+      border-bottom: 4px solid transparent;
+
+      &.active {
+        border-bottom: 4px solid v.$color-secondary;
+      }
+    }
+
+    > ul {
+      li {
+        a {
+          &.active {
+            color: v.$color-secondary;
+          }
+        }
+      }
+    }
+  }
+
+  a {
+    &:hover {
+      color: v.$color-secondary;
+    }
+  }
+}

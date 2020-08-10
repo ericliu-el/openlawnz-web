@@ -1,0 +1,47 @@
+@use '../../../styles/vars' as v;
+@use '../../../styles/mixins' as m;
+
+.financials {
+  article:first-child {
+    margin-top: 30px;
+  }
+
+  .reports {
+    padding-bottom: 25px;
+
+    h1 {
+      color: v.$color-secondary;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      li {
+        width: 48%;
+
+        a {
+          font-size: 19px;
+          line-height: 24px;
+          font-weight: bold;
+          border-bottom: solid 1px transparent;
+
+          &:hover {
+            color: v.$color-secondary;
+            border-bottom: solid 1px v.$color-secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include m.breakpoint-md {
+  .financials {
+    article:first-child {
+      margin-top: 0;
+    }
+  }
+}

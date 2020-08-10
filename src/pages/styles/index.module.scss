@@ -1,0 +1,119 @@
+@use '../../styles/vars' as v;
+@use '../../styles/mixins' as m;
+
+// homepage
+.homepage {
+  padding-bottom: 88px;
+  overflow: hidden;
+
+  .content {
+    margin-top: 88px;
+
+    h1 {
+      color: v.$color-primary;
+      margin-bottom: 24px;
+    }
+
+    .missions {
+      text-align: center;
+
+      ul {
+        li {
+          margin-top: 32px;
+
+          p {
+            font-size: 19px;
+            line-height: 24px;
+            margin-top: 28px;
+            font-weight: bold;
+          }
+        }
+
+        @include m.breakpoint-lg {
+          display: flex;
+          justify-content: space-between;
+
+          li {
+            width: 30%;
+          }
+        }
+      }
+    }
+
+    .explore {
+      margin-top: 48px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .cards {
+        div + div {
+          margin-top: 16px;
+        }
+      }
+
+      @include m.breakpoint-md {
+        .cards {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+
+          div + div {
+            margin-top: 0;
+            margin-left: 16px;
+          }
+        }
+      }
+    }
+
+    .contact {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      button {
+        margin-top: 24px;
+      }
+    }
+
+    .right {
+      display: none;
+    }
+  }
+
+  @include m.breakpoint-lg {
+    .content {
+      display: flex;
+      justify-content: space-between;
+
+      .left {
+        width: 66.67%;
+      }
+
+      .right {
+        width: 25%;
+        display: block;
+
+        ul {
+          li {
+            font-size: 19px;
+            line-height: 24px;
+            margin-top: 16px;
+            font-weight: bold;
+
+            a {
+              &:hover {
+                color: v.$color-secondary;
+                border-bottom: 1px solid v.$color-secondary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

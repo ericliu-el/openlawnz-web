@@ -1,0 +1,45 @@
+@use '../../styles/mixins' as m;
+
+.container {
+  > main {
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: 0 auto;
+
+    .layoutTwos {
+      display: flex;
+      flex-direction: column-reverse;
+      padding-top: 45px;
+      padding-bottom: 40px;
+
+      .layoutLeft,
+      .layoutRight {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include m.breakpoint-md {
+  .container {
+    > main {
+      max-width: 1440px;
+      padding-left: 80px;
+      padding-right: 80px;
+
+      .layoutTwos {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 88px;
+
+        .layoutLeft {
+          width: 66.67%;
+        }
+
+        .layoutRight {
+          width: 25%;
+        }
+      }
+    }
+  }
+}
