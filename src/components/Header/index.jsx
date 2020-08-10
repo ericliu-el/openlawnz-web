@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import cn from "classnames"
 import { Link } from "gatsby"
 
 import Icon from "../Icon"
@@ -46,7 +47,7 @@ const Header = () => {
         <Search />
       </header>
 
-      <div className={`${styles.fullMenu} ${openMenu ? styles.show : null}`}>
+      <div className={cn(styles.fullMenu, openMenu ? styles.show : null)}>
         <ul>
           {Menu.map(({ title, link, subMenu = [] }) =>
             link ? (
