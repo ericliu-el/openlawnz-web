@@ -7,7 +7,7 @@ import styles from "./footer.module.scss"
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.contact}>
+      <div>
         <p>Contact Us</p>
         <p>enquiries@openlaw.nz</p>
         <p>OpenLaw NZ | Registered NZ Charity</p>

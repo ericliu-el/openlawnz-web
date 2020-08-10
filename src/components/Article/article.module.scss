@@ -5,15 +5,14 @@
 
   h1 {
     color: v.$color-primary;
+    margin-bottom: 16px;
   }
 
   div {
-    font-size: 19px;
-    line-height: 1.5em;
     color: v.$color-grey-80;
 
     > p + p {
-      margin-top: 1em;
+      margin-top: 20px;
     }
   }
 }

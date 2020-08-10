@@ -8,9 +8,12 @@
 
   h1 {
     color: v.$color-primary;
+    margin-bottom: 16px;
   }
 
   .directors {
+    margin-top: 30px;
+
     > div {
       margin-bottom: 20px;
       width: 100%;

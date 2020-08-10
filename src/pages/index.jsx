@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Layout, Hero, Card, Contact } from "../components"
+import { Layout, Hero, Card, Button } from "../components"
 
 import Access from "../images/svgs/access.svg"
 import Innovation from "../images/svgs/innovation.svg"
@@ -19,10 +19,10 @@ const HomePage = () => {
         <div className={styles.left}>
           <div className={styles.missions}>
             <h1>Our Mission</h1>
-            <p>
+            <h5>
               OpenLaw NZ is an open-source platform that any country can copy and use for the betterment of their
               citizens.
-            </p>
+            </h5>
             <ul>
               <li>
                 <Access />
@@ -34,7 +34,7 @@ const HomePage = () => {
               </li>
               <li>
                 <Fund />
-                <p>Fund future development by providing services  using the OpenLaw NZ platform</p>
+                <p>Fund future development by providing services using the OpenLaw NZ platform</p>
               </li>
             </ul>
           </div>
@@ -48,7 +48,11 @@ const HomePage = () => {
             </div>
           </div>
 
-          <Contact />
+          <div className={styles.contact}>
+            <h1>Contact Us</h1>
+            <h5>We'd love to hear feedback, and things you have done with the platform.</h5>
+            <Button>Get In Touch</Button>
+          </div>
         </div>
 
         <div className={styles.right}>

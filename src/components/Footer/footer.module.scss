@@ -5,20 +5,15 @@
   color: v.$color-white;
   background-color: v.$color-primary;
   padding: 24px;
-  font-weight: bold;
 
   p {
-    line-height: 2.1em;
-  }
-
-  .contact {
-    p:first-child {
-      margin-bottom: 0.5em;
-    }
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 8px;
   }
 
   .supporter {
-    margin-top: 54px;
+    margin-top: 66px;
   }
 
   @include m.breakpoint-sm {
@@ -32,7 +27,7 @@
       margin-top: 0;
 
       p {
-        margin-right: 1em;
+        margin-right: 24px;
       }
     }
   }

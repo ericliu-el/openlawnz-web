@@ -69,8 +69,8 @@
 
   > ul {
     text-transform: capitalize;
-    font-size: 1.25rem;
-    line-height: 1.25em;
+    font-size: 20px;
+    line-height: 1.25;
     font-weight: bold;
     color: v.$color-white;
     padding-top: 40px;
@@ -79,7 +79,7 @@
       padding-left: 30px;
       width: 270px;
       margin-top: 20px;
-      line-height: 2em;
+      line-height: 2;
       border-bottom: 4px solid transparent;
       position: relative;
 
@@ -157,7 +157,7 @@
         display: flex;
         justify-content: space-between;
         color: v.$color-white;
-        font-size: 1.5rem;
+        font-size: 20px;
         font-weight: bold;
         line-height: 1.25;
 
@@ -194,7 +194,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 28px 80px;
+    padding: 17px 80px;
 
     nav {
       margin-bottom: 0;

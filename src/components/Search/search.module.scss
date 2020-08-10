@@ -10,9 +10,11 @@
 
   input {
     width: 100%;
-    padding: 1em;
+    padding: 11px 16px;
     border: none;
     outline: none;
+    font-size: 20px;
+    line-height: 1.25;
   }
 
   button {
@@ -20,8 +22,9 @@
     color: v.$color-white;
     border: none;
     outline: none;
-    font-size: 1.25rem;
-    padding: 0.6em 1.2em;
+    font-size: 20px;
+    line-height: 1.25;
+    padding: 11px 30px;
     font-weight: bold;
   }
 

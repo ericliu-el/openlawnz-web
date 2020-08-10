@@ -1,50 +1,37 @@
 @use '../../styles/vars' as v;
+@use '../../styles/mixins' as m;
 
 .card {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  padding: 24px;
+  padding: 24px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
 
   img {
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
   }
 
   h2 {
-    font-size: 1.75rem;
-    font-weight: bold;
     color: v.$color-secondary;
   }
 
-  h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-
-  h4 {
-    font-size: 1.375rem;
-    font-weight: bold;
-  }
-
-  p {
-    font-weight: bold;
-    margin-top: 1em;
-    line-height: 1.25em;
-  }
-
   &.small {
-    width: 272px;
+    width: 100%;
+    min-width: 266px;
   }
 
   &.medium {
-    width: 366px;
+    max-width: 366px;
   }
 
   &.large {
     max-width: 740px;
+    font-size: 19px;
+    line-height: 24px;
+    font-weight: bold;
     flex-direction: row;
 
     div {
@@ -57,16 +44,23 @@
     border-radius: 5px;
     background-color: v.$color-grey-10;
     justify-content: flex-start;
+    padding: 32px;
 
     img {
-      margin-bottom: 1rem;
+      margin-bottom: 20px;
     }
 
     p {
-      margin-top: 0.5rem;
-      font-size: 19px;
-      line-height: 28px;
-      font-weight: normal;
+      margin-top: 8px;
+    }
+  }
+}
+
+@include m.breakpoint-sm {
+  .card {
+    &.small {
+      max-width: 266px;
+      min-width: 220px;
     }
   }
 }
