@@ -72,7 +72,7 @@
     text-transform: capitalize;
     font-size: 20px;
     line-height: 1.25;
-    font-weight: bold;
+    font-weight: 600;
     color: v.$color-white;
     padding-top: 40px;
 
@@ -89,7 +89,7 @@
         padding-left: 24px;
 
         li {
-          font-weight: 600;
+          font-weight: 500;
           font-size: 17px;
           margin-top: 5px;
 
@@ -166,11 +166,12 @@
         margin-bottom: 12px;
 
         .items {
+          padding-top: 3px;
           display: flex;
           justify-content: space-between;
           color: v.$color-white;
           font-size: 20px;
-          font-weight: bold;
+          font-weight: 600;
           line-height: 1.25;
 
           a + a {
