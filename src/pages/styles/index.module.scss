@@ -88,7 +88,6 @@
     .hero {
       height: 285px;
       align-items: center;
-      padding: 0;
     }
   }
 }
@@ -121,6 +120,10 @@
 
 @include m.breakpoint-lg {
   .homepage {
+    .hero {
+      padding: 0;
+    }
+
     .content {
       margin: 0 auto;
       margin-top: 88px;
