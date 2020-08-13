@@ -27,6 +27,7 @@
 
   .content {
     margin-top: 88px;
+    padding: 0 24px;
 
     h1 {
       color: v.$color-primary;
@@ -98,7 +99,7 @@
     background-position: top center;
 
     .content {
-      padding: 0 56px;
+      padding: 0 80px;
     }
 
     .explore {
@@ -123,7 +124,7 @@
     .content {
       margin: 0 auto;
       margin-top: 88px;
-      max-width: 1392px;
+      max-width: 1440px;
       display: flex;
       justify-content: space-between;
 
