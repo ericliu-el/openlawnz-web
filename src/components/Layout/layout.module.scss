@@ -23,11 +23,11 @@
 @include m.breakpoint-md {
   .container {
     > main {
-      max-width: 1440px;
-      padding-left: 80px;
-      padding-right: 80px;
-
       .layoutTwos {
+        padding-left: 80px;
+        padding-right: 80px;
+        max-width: 1440px;
+        margin: 0 auto;
         flex-direction: row;
         justify-content: space-between;
         padding-top: 88px;

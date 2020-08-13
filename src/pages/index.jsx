@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Layout, Hero, Card, Button } from "../components"
+import { Layout, Card, Button } from "../components"
 
 import Access from "../images/svgs/access.svg"
 import Innovation from "../images/svgs/innovation.svg"
@@ -14,7 +14,9 @@ import styles from "./styles/index.module.scss"
 const HomePage = () => {
   return (
     <Layout className={styles.homepage}>
-      <Hero />
+      <div className={styles.hero}>
+        <h1>A new, free legal research platform for New Zealand.</h1>
+      </div>
       <div className={styles.content}>
         <div className={styles.left}>
           <div className={styles.missions}>

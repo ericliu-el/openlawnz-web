@@ -41,7 +41,18 @@ const Menu =
           link: "/",
         },
         {
-          title: "Property",
+          title: "-",
+        },
+        {
+          title: "Search FAQ",
+          link: "/",
+        },
+        {
+          title: "Legal Research Basics",
+          link: "/",
+        },
+        {
+          title: "Plugins",
           link: "/",
         },
       ]

@@ -17,34 +17,36 @@ const Header = () => {
   return (
     <>
       <header className={styles.header}>
-        <nav>
-          <Link to="/">
-            <Logo />
-          </Link>
-
-          <div className={styles.items}>
-            <Icon
-              name="close"
-              onClick={() => {
-                setOpenMenu(false)
-                setOpenItem(null)
-              }}
-              className={openMenu ? null : styles.hideIcon}
-            />
-            <Icon
-              name="hamburger"
-              fillWhite
-              onClick={() => setOpenMenu(true)}
-              className={openMenu ? styles.hideIcon : null}
-            />
-            <Link partiallyActive activeClassName={styles.active} to="/about">
-              Our Mission
+        <div className={styles.container}>
+          <nav>
+            <Link to="/">
+              <Logo />
             </Link>
-            <Link to="/">Get Involved</Link>
-            <Link to="/">Get Empowered</Link>
-          </div>
-        </nav>
-        <Search />
+
+            <div className={styles.items}>
+              <Icon
+                name="close"
+                onClick={() => {
+                  setOpenMenu(false)
+                  setOpenItem(null)
+                }}
+                className={openMenu ? null : styles.hideIcon}
+              />
+              <Icon
+                name="hamburger"
+                fillWhite
+                onClick={() => setOpenMenu(true)}
+                className={openMenu ? styles.hideIcon : null}
+              />
+              <Link partiallyActive activeClassName={styles.active} to="/about">
+                Our Mission
+              </Link>
+              <Link to="/">Get Involved</Link>
+              <Link to="/">Get Empowered</Link>
+            </div>
+          </nav>
+          <Search />
+        </div>
       </header>
 
       <div className={cn(styles.fullMenu, openMenu ? styles.show : null)}>
@@ -57,13 +59,13 @@ const Header = () => {
             ) : (
               <li key={title} className={openItem === title ? styles.open : null}>
                 <button href="#" onClick={() => (openItem === title ? setOpenItem(null) : setOpenItem(title))}>
-                  <Icon name={openItem === title ? "arrowDown" : "arrowRight"} strokeSecondary strokeWidth={3} />
                   {title}
+                  <Icon name={openItem === title ? "minus" : "open"} strokeWidth={1} />
                 </button>
                 <ul>
                   {subMenu.map(({ title, link }) => (
                     <li key={title}>
-                      <Link to={link}>{title}</Link>
+                      {title === "-" ? <div className={styles.divider}></div> : <Link to={link}>{title}</Link>}
                     </li>
                   ))}
                 </ul>
